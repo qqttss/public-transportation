@@ -1,8 +1,8 @@
 # public-transportation
 
-The application allows users to select a departure and arrival train station. The user will then see train information about the two stations. The information includes connected stations on the path, arrival & departure times, and duration time. Initially, the application load a default train schedule of Caltrain.   
+The application allows users to select a departure and arrival train station. The user will then see train information about the two stations. The information includes connected stations on the path, arrival & departure times, and duration time. 
 
-When the application is online the user is able to see up to date information of train schedule. When offline the user still has full access to the general train schedule.
+Initially, the application load a default train schedule of Caltrain. When the application is online, the user is able to see up to date information of train schedule. When offline the user still has full access to the general train schedule.
 
 The App is built with plain JavaScript, Promise, Service Worker, IndexedDB and handlebars.
 
