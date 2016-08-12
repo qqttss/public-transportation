@@ -11,5 +11,7 @@ If you want to try the app, please visit the site below:
 https://qqttss.github.io/public-transportation
 
 How to use the application?
+
 1) Clone the ripo to your local drive and navigate to the directory containing the application, run npm install.
+
 2) Service workers only run over HTTPS for security reasons.
