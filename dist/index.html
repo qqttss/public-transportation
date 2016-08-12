@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Public Transportation</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./dist/css/styles.min.css">
+    </head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div class="container">
+            <div class="header-title">
+                <div class="logo-container"><img src="app/images/train-logo.png" alt="This is train logo."></div>
+                <span class="train-title">Caltrain</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+    <div class="container">
+        <div class="group">
+            <div class="input-container">
+                <div class="group">
+                    <label for="departure-stop" class="stop-label">Departure</label>
+                    <div class="stop-list">
+                        <input list='departure-list' name='departStop' id="departure-stop" placeholder="Tamien Station" class="input-stop" autofocus>
+                        <datalist id='departure-list'>
+                            <option value="22nd St">22nd St</option>
+                            <option value="Atherton">Atherton</option>
+                            <option value="Bayshore">Bayshore</option>
+                            <option value="Belmont">Belmont</option>
+                            <option value="Blossom Hill">Blossom Hill</option>
+                            <option value="Broadway">Broadway</option>
+                            <option value="Burlingame">Burlingame</option>
+                            <option value="California Ave">California Ave</option>
+                            <option value="Capitol">Capitol</option>
+                            <option value="College Park">College Park</option>
+                            <option value="Gilroy">Gilroy</option>
+                            <option value="Hayward Park">Hayward Park</option>
+                            <option value="Hillsdale">Hillsdale</option>
+                            <option value="Lawrence">Lawrence</option>
+                            <option value="Menlo Park">Menlo Park</option>
+                            <option value="Millbrae">Millbrae</option>
+                            <option value="Morgan Hill">Morgan Hill</option>
+                            <option value="Mt View">Mt View</option>
+                            <option value="Palo Alto">Palo Alto</option>
+                            <option value="Redwood City">Redwood City</option>
+                            <option value="San Antonio">San Antonio</option>
+                            <option value="San Bruno">San Bruno</option>
+                            <option value="San Carlos">San Carlos</option>
+                            <option value="Santa Clara">Santa Clara</option>
+                            <option value="San Francisco">San Francisco</option>
+                            <option value="San Martin">San Martin</option>
+                            <option value="San Mateo">San Mateo</option>
+                            <option value="San Jose">San Jose</option>
+                            <option value="San Jose Diridon">San Jose Diridon</option>
+                            <option value="So. San Francisco">So. San Francisco</option>
+                            <option value="Sunnyvale">Sunnyvale</option>
+                            <option value="Tamien">Tamien</option>
+                            <option value="Tamien Station">Tamien</option>
+                        </datalist>
+                    </div>
+                </div>
+
+                <div class="group">
+                    <label for="arrival-stop" class="stop-label">Arrival</label>
+                    <div class="stop-list">
+                        <input list='arrival-list' name='arrivalStop' id="arrival-stop" placeholder="San Jose" class="input-stop">
+                        <datalist id='arrival-list'>
+                            <option value="22nd St">22nd St</option>
+                            <option value="Atherton">Atherton</option>
+                            <option value="Bayshore">Bayshore</option>
+                            <option value="Belmont">Belmont</option>
+                            <option value="Blossom Hill">Blossom Hill</option>
+                            <option value="Broadway">Broadway</option>
+                            <option value="Burlingame">Burlingame</option>
+                            <option value="California Ave">California Ave</option>
+                            <option value="Capitol">Capitol</option>
+                            <option value="College Park">College Park</option>
+                            <option value="Gilroy">Gilroy</option>
+                            <option value="Hayward Park">Hayward Park</option>
+                            <option value="Hillsdale">Hillsdale</option>
+                            <option value="Lawrence">Lawrence</option>
+                            <option value="Menlo Park">Menlo Park</option>
+                            <option value="Millbrae">Millbrae</option>
+                            <option value="Morgan Hill">Morgan Hill</option>
+                            <option value="Mt View">Mt View</option>
+                            <option value="Palo Alto">Palo Alto</option>
+                            <option value="Redwood City">Redwood City</option>
+                            <option value="San Antonio">San Antonio</option>
+                            <option value="San Bruno">San Bruno</option>
+                            <option value="San Carlos">San Carlos</option>
+                            <option value="Santa Clara">Santa Clara</option>
+                            <option value="San Francisco">San Francisco</option>
+                            <option value="San Martin">San Martin</option>
+                            <option value="San Mateo">San Mateo</option>
+                            <option value="San Jose">San Jose</option>
+                            <option value="San Jose Diridon">San Jose Diridon</option>
+                            <option value="So. San Francisco">So. San Francisco</option>
+                            <option value="Sunnyvale">Sunnyvale</option>
+                            <option value="Tamien">Tamien</option>
+                            <option value="Tamien Station">Tamien</option>
+                        </datalist>
+                    </div>
+                </div>
+
+                <div class="group">
+                    <label for="trip-date" class="stop-label">Date</label>
+                    <div class="stop-list">
+                        <input type="date" name="trip-date" id="trip-date" class="input-stop">
+                    </div>
+                </div>
+
+                <div class="group">
+                    <button id="search-btn" class="btn">Search</button>
+                </div>
+
+                <div class="searched-stops group">
+                    <div class="search-title">You are searching: </div>
+                    <div class="search-content">
+                        <div class="search-item" id="d-stop"></div><!--
+                        --><div class="search-item" id="search-arrow"><img class="stop-arrow" src="app/images/arrow.png" alt="It is arrom image."></div><!--
+                        --><div class="search-item" id="a-stop"></div>
+                    </div>
+                    <div class="search-notice"></div>
+                </div>
+            </div>
+
+            <div class="trips-container">
+                <div class="table-header">
+                    <div class="header-item">Trip</div><!--
+                    --><div class="header-item">Departure</div><!--
+                    --><div class="header-item">Arrival</div><!--
+                    --><div class="header-item">Duration</div>
+                </div>
+                <div id="trips-table">
+                    <!-- display found trips-->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="footer">
+        <div class="container">
+            <div class="left-label">&#169; Q. SHEN 2016</div>
+            <div class="right-label">Public Transportation</div>
+        </div>
+    </div>
+
+</div>
+
+        <script id="trip-entry" type="text/x-handlebars-template">
+            <div class="table-item">
+                <div class="trip-item">{{departure.tripId}}</div><!--
+                --><div class="trip-item">{{departure.arrTime}}</div><!--
+                --><div class="trip-item">{{arrival.arrTime}}</div><!--
+                --><div class="trip-item">{{duration}}</div>
+            </div>
+        </script>
+
+        <script src="./dist/js/lib/handlebars.min.js"></script>
+        <script src="./dist/js/main.min.js"></script>
+    </body>
+</html>
