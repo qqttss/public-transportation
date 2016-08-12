@@ -292,7 +292,7 @@ function searchTrips(departureId, arrivalId, tripWeekday) {
             } else {
                 // If found, display the trips
                 console.log("Display trips obtained from local database:");
-                //console.log(tripFound);
+                console.log(tripFound);
 
                 // display trips found
                 displayTrips(tripFound);
@@ -432,7 +432,7 @@ function getTrips(departureId, arrivalId, tripWeekday) {
             // console.log("trips found as follows:\n");
             // console.log(tripFound);
 
-            //console.log("trips found as follows:\n");
+            //console.log("matched trips found as follows:\n");
             //console.log(tripsFinal);
 
             // sort found trips and return them
@@ -458,7 +458,7 @@ function getTrips(departureId, arrivalId, tripWeekday) {
                 });
 
                 //console.log("Display trips fetched from data/GTFS");
-                //displayTrips(tripsFinal);
+                displayTrips(tripsFinal);
             }
         }); //  end fetch('./data/GTFS/stop_times.txt')
     }); //  end fetch('./data/GTFS/trips.txt')
