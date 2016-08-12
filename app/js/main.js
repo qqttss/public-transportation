@@ -291,10 +291,10 @@ function searchTrips(departureId, arrivalId, tripWeekday) {
             } else {
                 // If found, display the trips
                 console.log("Display trips obtained from local database:");
-                console.log(tripFound);
+                //console.log(tripFound);
 
-                // display trips found
                 displayTrips(tripFound);
+                searchNotice.innerHTML = "Trips are available today!";
             }
         });
     });
@@ -431,12 +431,6 @@ function getTrips(departureId, arrivalId, tripWeekday) {
                 }
             }
 
-            // console.log("trips found as follows:\n");
-            // console.log(tripFound);
-
-            //console.log("matched trips found as follows:\n");
-            //console.log(tripsFinal);
-
             // sort found trips and return them
             return sortTrips(tripsFinal);
 
@@ -460,7 +454,8 @@ function getTrips(departureId, arrivalId, tripWeekday) {
                     }
                 });
 
-                //console.log("Display trips fetched from data/GTFS");
+                console.log("Display trips fetched from data/GTFS");
+                //console.log("matched trips found as follows:");
                 displayTrips(tripsFinal);
             }
 
