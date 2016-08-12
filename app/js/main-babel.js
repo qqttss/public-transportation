@@ -458,7 +458,7 @@ function getTrips(departureId, arrivalId, tripWeekday) {
                 });
 
                 //console.log("Display trips fetched from data/GTFS");
-                //displayTrips(tripsFinal);
+                displayTrips(tripsFinal);
             }
         }); //  end fetch('./data/GTFS/stop_times.txt')
     }); //  end fetch('./data/GTFS/trips.txt')
